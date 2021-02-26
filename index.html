@@ -11,13 +11,13 @@
 <body>
 	<div class="header">
 		<header>
-		  <div><img src="images/logo.png" alt="Martins Aquarium"></div>
-		  <h1>A collection of exotic fish with care tips and Martin's personal favorite fish harvest locations.</h1>
+		  <div><img src="images/logo.png" alt="You Have Swam Into Martins Aquarium!"></div>
 		</header>
 	</div>
+
 	<div class="fishTank">
 		<section id="fishList">
-			<h2>Put All the Fish Here</h2>
+			
 		</section>
 	</div>
 
@@ -25,20 +25,3 @@
 
 </body>
 </html> 
- 15  scripts/Fish.js 
-@@ -0,0 +1,15 @@
-export const Fish = (fishObj) => {
-	return (
-	`<article class="fish-card">
-		<div><img class="fish-image" src="images/${fishObj.image}" /></div>
-		<h3 class="fish-name">${fishObj.name}</h3>
-		<ul>
-			<li class="fish-details">${fishObj.species}</li>
-			<li class="fish-details">Length: ${fishObj.inches}</li>
-			<li class="fish-details">Found: ${fishObj.harvestLocation}</li>
-			<li class="fish-details">Diet: ${fishObj.diet}</li>
-			<li class="fish-details">Salt Water: ${fishObj.saltwater}</li>
-		</ul>
-	</article>`
-	)
-} 
