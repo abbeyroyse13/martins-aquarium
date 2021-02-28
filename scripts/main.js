@@ -1,7 +1,10 @@
-import { getFish } from './FishData.js'
+console.log("hello hello hello");
 
-const allTheFish = getFish()
 
-for (const fish of allTheFish) {
-    console.log(allTheFish);
-}
+import { FishList } from "./fish/FishList.js";
+//import { LocationList } from "./locations/LocationList.js";
+//import { TipList } from "./tips/TipList.js";
+
+FishList();
+LocationList();
+TipList();
