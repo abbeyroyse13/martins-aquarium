@@ -19,6 +19,18 @@ header h1 {
 	font-size: 1.5em;
 }
 
+aside {
+    float: right;
+	border: solid black 5px;
+	background-color: aquamarine;
+}
+
+.locations {
+	float: left;
+	border: solid black 5px;
+	background-color: aquamarine;
+}
+
 nav ul {
 	list-style-type: none;
 	margin: 0;
@@ -57,7 +69,7 @@ nav a:active {
 }
 
 .fish-card {
-	background-color: lightcyan;
+	background-color: #AFE3CE;
 	margin: .5em;
 	max-width: 200px;
 }
@@ -79,7 +91,8 @@ nav a:active {
 }
 
 footer {
-	background-color: darkcyan;
+	background-color: #FDAA9D;
 	color: whitesmoke;
 	text-align: center;
+	vertical-align: bottom;
 } 

@@ -10,21 +10,16 @@ import { getFish } from "./FishData.js";
  4. Finally set the dom equal to the variable containing the fish html representations
  **/
 
- export const FishList = () => {
-	
+export const FishList = () => {
 	const allFishes = getFish();
-	
 	const DOMLocation = document.querySelector("#fishList");
-	
 	let fishHTMLRepresentations = "";
-	
 
-	for(const oneFish of allFishes){
-		
+	for (const oneFish of allFishes) {
 		fishHTMLRepresentations += Fish(oneFish);
+		console.log("fishHTMLRepresentations", fishHTMLRepresentations);
 	}
-	console.log("fishHTMLRepresentations", fishHTMLRepresentations);
 
 	DOMLocation.innerHTML = fishHTMLRepresentations;
-
- }
+	
+}

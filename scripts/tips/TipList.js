@@ -10,21 +10,16 @@ import { getTips } from "./TipData.js";
  4. Finally set the dom equal to the variable containing the fish html representations
  **/
 
- export const TipList = () => {
-	
+export const TipList = () => {
 	const allTips = getTips();
-	
 	const DOMLocation = document.querySelector("#tipList");
-	
-	let tipsHTMLRepresentations = "";
-	
+	let fishTipsHTMLRep = "";
 
-	for(const oneTip of allTips){
-		
-		tipsHTMLRepresentations += Tip(oneTip);
+	for (const oneTip of allTips) {
+		fishTipsHTMLRep += Tip(oneTip);
+		console.log("fishTipsHTMLRep", fishTipsHTMLRep);
 	}
-	console.log("tipsHTMLRepresentations", tipsHTMLRepresentations);
 
-	DOMLocation.innerHTML = tipsHTMLRepresentations;
+	DOMLocation.innerHTML = fishTipsHTMLRep;
 
- }
+}

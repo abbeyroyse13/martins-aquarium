@@ -10,21 +10,16 @@ import { getLocations } from "./LocationData.js";
  4. Finally set the dom equal to the variable containing the fish html representations
  **/
 
- export const LocationList = () => {
-	
+export const LocationList = () => {
 	const allLocations = getLocations();
-	
 	const DOMLocation = document.querySelector("#locationList");
-	
-	let locationsHTMLRepresentations = "";
-	
+	let fishLocationsHTMLRep = "";
 
-	for(const oneLocation of alllocations){
-		
-		locationsHTMLRepresentations += Location(oneLocation);
+	for (const oneLocation of allLocations) {
+		fishLocationsHTMLRep += Location(oneLocation);
+		console.log("fishLocationsHTMLRep", fishLocationsHTMLRep);
 	}
-	console.log("locationsHTMLRepresentations", locationsHTMLRepresentations);
 
-	DOMLocation.innerHTML = locationsHTMLRepresentations;
-
- }
+	DOMLocation.innerHTML = fishLocationsHTMLRep;
+	
+}
