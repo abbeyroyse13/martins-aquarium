@@ -1,4 +1,4 @@
-export const location = (locationObj) => {
+export const Location = (locationObj) => {
 	return (
 	`<article class="location-card">
 		<h3 class="location-name">${locationObj.name}</h3>
