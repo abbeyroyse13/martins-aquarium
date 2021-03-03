@@ -1,5 +1,5 @@
 import { Fish } from "./Fish.js";
-import { getFish } from "./FishData.js";
+import { getFish, getMostHolyFish, getSoldierFish, getUnworthy } from "./FishData.js";
 
 
 /** Define the steps that need to be taken
@@ -10,7 +10,7 @@ import { getFish } from "./FishData.js";
  4. Finally set the dom equal to the variable containing the fish html representations
  **/
 
-export const FishList = () => {
+/** export const FishList = () => {
 	const allFishes = getFish();
 	const DOMLocation = document.querySelector("#fishList");
 	let fishHTMLRepresentations = "";
@@ -21,5 +21,25 @@ export const FishList = () => {
 	}
 
 	DOMLocation.innerHTML = fishHTMLRepresentations;
+	
+} **/
+
+export const FishList = () => {
+
+	const holyFish = getMostHolyFish();
+	const soldierFish = getSoldierFish();
+	const unworthyFish = getUnworthy();
+
+	const allFishes = getMostHolyFish().concat(getSoldierFish(), getUnworthy());
+	console.log(typeof allFishes);
+	const DOMLocation = document.querySelector("#fishList");
+	let fishHTMLRepresentations = "";
+
+	for (const oneFish of allFishes) {
+		fishHTMLRepresentations += Fish(oneFish);
+		console.log("fishHTMLRepresentations", fishHTMLRepresentations);
+	}
+
+	DOMLocation.innerHTML = `${fishHTMLRepresentations}`;
 	
 }
