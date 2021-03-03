@@ -247,3 +247,42 @@ const fishCollection = [
 export const getFish = () => {
 	return fishCollection
 };
+
+export const getMostHolyFish = () => {
+    // 3, 6, 9, 12, etc... fish
+    const holyFishArray = []
+
+    for (const fishObj of fishCollection) {
+		if (fishObj.inches % 3 === 0) {
+			holyFishArray.push(fishObj);
+		};
+    };
+	console.log("Most Holy Fish", `${holyFishArray}`);
+    return holyFishArray;
+};
+
+export const getSoldierFish = () => {
+    // 5, 10, 15, 20, 25, etc... fish
+	const soldierFishArray = []
+
+	for (const fishObj of fishCollection) {
+		if (fishObj.inches % 5 === 0) {
+			soldierFishArray.push(fishObj);
+		};
+	};
+	console.log("Solider Fish", `${soldierFishArray}`);
+    return soldierFishArray;
+};
+
+export const getUnworthy = () => {
+    // Any fish not a multiple of 3 or 5
+	const unworthyFishArray = [];
+
+	for (const fishObj of fishCollection) {
+		if (!(fishObj.inches % 5 === 0 || fishObj.inches % 3 === 0)) {
+			unworthyFishArray.push(fishObj);
+		};
+	};
+	console.log("Unworthy Fish", `${unworthyFishArray}`);
+    return unworthyFishArray;
+};
